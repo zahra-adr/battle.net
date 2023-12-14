@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .topMenu {
+      @apply 2xl:flex 2xl:flex-row 2xl:flex-wrap 2xl:justify-between 2xl:mr-5 2xl:mt-0 2xl:gap-x-1 xl:flex xl:flex-row xl:flex-wrap xl:justify-between xl:mr-5 xl:mt-0 xl:gap-x-1 lg:flex lg:flex-row lg:flex-wrap lg:justify-between lg:mr-5 lg:mt-0 lg:gap-x-1 md:flex md:flex-row md:flex-wrap md:justify-between md:mr-5 md:mt-0 md:gap-x-1 sm:flex sm:flex-row sm:flex-wrap sm:justify-between sm:mr-5 sm:mt-0 sm:gap-x-1 flex flex-row flex-wrap justify-between mr-5 mt-0 gap-x-1;
+    }
+    .bars {
+      @apply 2xl:hidden xl:hidden lg:hidden md:inline-block sm:inline-block inline-block pl-5 pt-7  text-white text-[25px] dark:text-black;
+    }
+    .menuMedia {
+      @apply 2xl:hidden xl:hidden lg:hidden md:block sm:block block;
+    }
+    .Light {
+      @apply 2xl:ml-5 2xl:w-[70px] 2xl:mt-6 2xl:text-white 2xl:border 2xl:border-white 2xl:rounded-md 2xl:dark:border-black 2xl:dark:text-black xl:ml-5 xl:w-[70px] xl:mt-6 xl:text-white xl:border xl:border-white xl:rounded-md xl:dark:border-black xl:dark:text-black lg:ml-5 lg:w-[70px] lg:mt-6 lg:text-white lg:border lg:border-white lg:rounded-md lg:dark:border-black lg:dark:text-black md:ml-5 md:w-[70px] md:mt-6 md:text-white md:border md:border-white md:rounded-md md:dark:border-black md:dark:text-black sm:ml-5 sm:w-[70px] sm:mt-6 sm:text-white sm:border sm:border-white sm:rounded-md sm:dark:border-black sm:dark:text-black ml-5 w-[70px] mt-6 text-white border border-white rounded-md dark:border-black dark:text-black;
+    }
+    .logo {
+      @apply 2xl:inline-block 2xl:relative 2xl:ml-1 xl:inline-block xl:relative xl:ml-1 lg:inline-block lg:relative lg:ml-1 md:inline-block md:relative md:mx-auto  sm:inline-block sm:relative sm:mx-auto inline-block relative;
+    }
+    .svgLogo {
+      @apply 2xl:w-[70%] 2xl:mx-0 xl:w-[70%] xl:mx-0 lg:w-[70%] lg:mx-0 md:w-[70%] md:mx-auto sm:w-[70%] sm:mx-auto mx-auto w-[70%]  pt-7;
+    }
+    .dBattle {
+      @apply 2xl:inline-block 2xl:border-none 2xl:outline-none 2xl:bg-[#15171E] 2xl:dark:bg-[#b16fbe] 2xl:hover:bg-[#23252B] 2xl:text-white 2xl:w-[250px] 2xl:h-[50px] 2xl:leading-[50px] 2xl:text-[18px] 2xl:font-bold 2xl:text-center 2xl:rounded-md xl:inline-block xl:border-none xl:outline-none xl:bg-[#15171E] xl:dark:bg-[#b16fbe] xl:hover:bg-[#23252B] xl:text-white xl:w-[250px] xl:h-[50px] xl:leading-[50px] xl:text-[18px] xl:font-bold xl:text-center xl:rounded-md lg:inline-block lg:border-none lg:outline-none lg:bg-[#15171E] lg:dark:bg-[#b16fbe] lg:hover:bg-[#23252B] lg:text-white lg:w-[250px] lg:h-[50px] lg:leading-[50px] lg:text-[18px] lg:font-bold lg:text-center lg:rounded-md md:hidden md:border-none md:outline-none md:bg-[#15171E] md:dark:bg-[#b16fbe] md:hover:bg-[#23252B] md:text-white md:w-[250px] md:h-[50px] md:leading-[50px] md:text-[18px] md:font-bold md:text-center md:rounded-md sm:hidden sm:border-none sm:outline-none sm:bg-[#15171E] sm:dark:bg-[#b16fbe] sm:hover:bg-[#23252B] sm:text-white sm:w-[250px] sm:h-[50px] sm:leading-[50px] sm:text-[18px] sm:font-bold sm:text-center sm:rounded-md border-none outline-none bg-[#15171E] dark:bg-[#b16fbe] hover:bg-[#23252B] text-white w-[250px] h-[50px] leading-[50px] text-[18px] font-bold text-center rounded-md hidden;
+    }
+    .support {
+      @apply 2xl:inline-block 2xl:border-none 2xl:outline-none 2xl:bg-[#15171E] 2xl:dark:bg-[#b16fbe] 2xl:hover:bg-[#23252B] 2xl:text-white 2xl:w-[150px] 2xl:h-[50px] 2xl:leading-[50px] 2xl:text-[18px] 2xl:font-bold 2xl:text-center 2xl:rounded-md xl:inline-block xl:border-none xl:outline-none xl:bg-[#15171E] xl:dark:bg-[#b16fbe] xl:hover:bg-[#23252B] xl:text-white xl:w-[150px] xl:h-[50px] xl:leading-[50px] xl:text-[18px] xl:font-bold xl:text-center xl:rounded-md lg:inline-block lg:border-none lg:outline-none lg:bg-[#15171E] lg:dark:bg-[#b16fbe] lg:hover:bg-[#23252B] lg:text-white lg:w-[150px] lg:h-[50px] lg:leading-[50px] lg:text-[18px] lg:font-bold lg:text-center lg:rounded-md md:hidden md:border-none md:outline-none md:bg-[#15171E] md:dark:bg-[#b16fbe] md:hover:bg-[#23252B] md:text-white md:w-[150px] md:h-[50px] md:leading-[50px] md:text-[18px] md:font-bold md:text-center md:rounded-md sm:hidden sm:border-none sm:outline-none sm:bg-[#15171E] sm:dark:bg-[#b16fbe] sm:hover:bg-[#23252B] sm:text-white sm:w-[150px] sm:h-[50px] sm:leading-[50px] sm:text-[18px] sm:font-bold sm:text-center sm:rounded-md hidden border-none outline-none bg-[#15171E] dark:bg-[#b16fbe] hover:bg-[#23252B] text-white w-[150px] h-[50px] leading-[50px] text-[18px] font-bold text-center rounded-md;
+    }
+    .account {
+      @apply 2xl:inline-block 2xl:dropdown 2xl:dropdown-hover 2xl:dropdown-end 2xl:border-none 2xl:outline-none 2xl:bg-[#15171E] 2xl:dark:bg-[#b16fbe] 2xl:hover:bg-[#23252B] 2xl:text-white 2xl:w-[150px] 2xl:h-[50px] 2xl:leading-[50px] 2xl:text-[18px] 2xl:font-bold 2xl:text-center 2xl:rounded-md xl:inline-block xl:dropdown xl:dropdown-hover xl:dropdown-end xl:border-none xl:outline-none xl:bg-[#15171E] xl:dark:bg-[#b16fbe] xl:hover:bg-[#23252B] xl:text-white xl:w-[150px] xl:h-[50px] xl:leading-[50px] xl:text-[18px] xl:font-bold xl:text-center xl:rounded-md lg:inline-block lg:dropdown lg:dropdown-hover lg:dropdown-end lg:border-none lg:outline-none lg:bg-[#15171E] lg:dark:bg-[#b16fbe] lg:hover:bg-[#23252B] lg:text-white lg:w-[150px] lg:h-[50px] lg:leading-[50px] lg:text-[18px] lg:font-bold lg:text-center lg:rounded-md md:hidden md:dropdown md:dropdown-hover md:dropdown-end md:border-none md:outline-none md:bg-[#15171E] md:dark:bg-[#b16fbe] md:hover:bg-[#23252B] md:text-white md:w-[150px] md:h-[50px] md:leading-[50px] md:text-[18px] md:font-bold md:text-center md:rounded-md sm:hidden sm:dropdown sm:dropdown-hover sm:dropdown-end sm:border-none sm:outline-none sm:bg-[#15171E] sm:dark:bg-[#b16fbe] sm:hover:bg-[#23252B] sm:text-white sm:w-[150px] sm:h-[50px] sm:leading-[50px] sm:text-[18px] sm:font-bold sm:text-center sm:rounded-md hidden dropdown dropdown-hover dropdown-end border-none outline-none bg-[#15171E] dark:bg-[#b16fbe] hover:bg-[#23252B] text-white w-[150px] h-[50px] leading-[50px] text-[18px] font-bold text-center rounded-md;
+    }
+    span.userMedia {
+      @apply 2xl:hidden xl:hidden lg:hidden md:block sm:block block pr-5 text-[25px] text-white dark:text-black relative left-[92%] bottom-7;
+    }
+    .accountMedia {
+      @apply 2xl:hidden xl:hidden lg:hidden md:inline-block sm:inline-block inline-block;
+    }
+    .menuLarge {
+      @apply 2xl:grid xl:grid lg:grid md:hidden sm:hidden hidden;
+    }
+    .gamesSlider {
+      @apply 2xl:h-auto xl:h-auto lg:h-auto md:h-[450px] sm:h-[450px] h-[450px];
+    }
+    .largeImage {
+      @apply 2xl:block xl:block lg:block md:hidden sm:hidden hidden;
+    }
+    .smallImage {
+      @apply 2xl:hidden xl:hidden lg:hidden md:block sm:block block;
+    }
+    .logoSlider{
+      @apply 2xl:w-[40%] 2xl:ml-0 xl:w-[40%] xl:ml-0 lg:w-[40%] lg:ml-0 md:w-[70%] md:mx-auto sm:w-[70%] sm:mx-auto w-[70%] mx-auto; 
+    }
+    .textSlider{
+      @apply 2xl:inset-x-[15%] xl:inset-x-[15%] lg:inset-x-[15%] md:inset-x-[35%] sm:inset-x-[25%] inset-x-[18%]; 
+      
+    }
+    .bottomSlider{
+      @apply 2xl:h-[130px] xl:h-[140px] lg:h-[170px] md:h-[170px] sm:h-[180px] h-[220px];
+    }
+    .imgLogoGames{
+      @apply 2xl:mx-auto xl:mx-2 lg:mx-2 md:mx-2 sm:mx-2 mx-2;
+    }
+    .smallSearch {
+      @apply 2xl:hidden xl:hidden lg:hidden md:block sm:block block;
+    }
+    .warGames {
+      @apply 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-2;
+    }
+    .textDownload {
+      @apply 2xl:pl-5 2xl:w-[36%] xl:pl-5 xl:w-[36%] lg:text-center lg:w-[100%] md:text-center md:w-[100%] sm:text-center sm:w-[100%] text-center w-[100%];
+    }
+    .logoDownload {
+      @apply 2xl:inline-block xl:inline-block lg:hidden md:hidden sm:hidden hidden;
+    }
+    .imgDownload {
+      @apply 2xl:w-[42%] 2xl:right-10 xl:w-[42%] xl:right-10 lg:w-[90%] lg:right-[-5%] lg:top-[20px] md:w-[90%] md:right-[-5%] md:top-[20px] sm:w-[90%] sm:right-[-5%] sm:top-[20px] w-[90%] right-[-5%] top-[20px];
+    }
+    .english {
+      @apply 2xl:w-[60%] xl:w-[60%] lg:w-[70%] md:w-[80%] sm:w-[100%] w-[100%];
+    }
+  }

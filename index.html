@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Battle.net</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="./icons/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" sizes="30x30" href="./images/logo fav.png">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        font-family: Rubik;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+      }
+      .active {
+        left: 0 !important;
+      }
+      div.panel {
+        display: none;
+      }
+      .activeRight {
+        right: 0 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-[#15171e] h-auto dark:bg-[#e7e5e4]">
+    <a href="" id="top"></a>
+    <div class="topMenu">
+      <!--start bars-->
+      <div class="bars">
+        <span class="fas fa-bars"></span>
+      </div>
+      <!--end bars-->
+      <button class="Light dark">
+        <div class="inline-block">
+          <span class="fa fa-sun-bright"></span>
+        </div>
+
+        <div class="inline-block">
+          <span class="fa fa-moon hidden dark:visible"></span>
+        </div>
+      </button>
+
+      <div class="logo">
+        <svg
+          class="svgLogo"
+          aria-hidden="true"
+          focusable="false"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 183.84"
+        >
+          <g>
+            <path
+              d="M459.56,132.69,420.61,54.63a11.44,11.44,0,0,0-10.08-6.16h-20.3a11.43,11.43,0,0,0-10.08,6.16l-38.8,78.06a2,2,0,0,0,1.8,3H360.6a2.74,2.74,0,0,0,2.55-1.5l8.58-17.15h57.6l8.57,17.15a2.53,2.53,0,0,0,2.56,1.5h17.45A2.1,2.1,0,0,0,459.56,132.69ZM380.15,99.75l16.24-32.63a2.37,2.37,0,0,1,2-1.21h4.06a2,2,0,0,1,1.95,1.21l16.25,32.63ZM1200,50.58V63.81a2.15,2.15,0,0,1-2.11,2.11H1162.7V145a1.5,1.5,0,0,1-2.48,1.15l-17.51-14.86a6,6,0,0,1-2.12-4.59V65.92h-28a4.27,4.27,0,0,1-3.76-2.41L1102.09,50a1,1,0,0,1,.9-1.51h94.75A2.3,2.3,0,0,1,1200,50.58ZM1011.24,67.42V83.51h64.23a8.73,8.73,0,0,1,0,17.45h-64.23v12a5.66,5.66,0,0,0,5.57,5.57h72.34a2.15,2.15,0,0,1,2.11,2.1V133.9a2.26,2.26,0,0,1-2.11,2.1h-78.21a22.3,22.3,0,0,1-22.26-22.26v-54a11.11,11.11,0,0,1,11.13-11.13h89.34a2.15,2.15,0,0,1,2.11,2.1V64a2.26,2.26,0,0,1-2.11,2.1H1012.6C1011.84,65.91,1011.24,66.52,1011.24,67.42ZM969.88,51.17v76.56A10.86,10.86,0,0,1,952,136L884.45,78.7v54.44a2.69,2.69,0,0,1-2.7,2.71h-17a2.83,2.83,0,0,1-2.86-2.71V56.74a10.86,10.86,0,0,1,17.9-8.27l67.53,57.3V51.32A2.83,2.83,0,0,1,950,48.47h17A2.73,2.73,0,0,1,969.88,51.17ZM759.47,67.42V83.51h44.67a8.73,8.73,0,0,1,0,17.45H759.47v12a5.65,5.65,0,0,0,5.56,5.57h72.35a2.15,2.15,0,0,1,2.1,2.1V133.9a2.15,2.15,0,0,1-2.1,2.1H759.17a22.3,22.3,0,0,1-22.26-22.26v-54A11.1,11.1,0,0,1,748,48.62h89.34a2.15,2.15,0,0,1,2.1,2.1V64a2.15,2.15,0,0,1-2.1,2.1H760.82C760.07,65.91,759.47,66.52,759.47,67.42Zm-31.89,52.94V133.6a2.15,2.15,0,0,1-2.1,2.1H662.61a22.3,22.3,0,0,1-22.26-22.26V50.57a2.15,2.15,0,0,1,2.1-2.1H661a2.15,2.15,0,0,1,2.11,2.1v62.12a5.65,5.65,0,0,0,5.56,5.56h56.86A2.15,2.15,0,0,1,727.58,120.36ZM628.47,50.58V63.81a2.16,2.16,0,0,1-2.11,2.11H593.57V145a1.5,1.5,0,0,1-2.47,1.14l-17.66-15a6,6,0,0,1-2.13-4.59V65.77H550a4.27,4.27,0,0,1-3.76-2.41l-6.77-13.53c-.3-.6.15-1.36,1.05-1.36h85.88A2.16,2.16,0,0,1,628.47,50.58ZM317.28,91.18c4.06-1.5,12.33-5.41,12.33-16.54,0-19.1-14.13-26.17-31.13-26.17H233.66a2.15,2.15,0,0,0-2.11,2.1v83a2.15,2.15,0,0,0,2.11,2.1h73.09c10.68-.15,26-6.17,26-25.87C332.77,97.5,321.79,92.39,317.28,91.18ZM253.81,67.27a1.27,1.27,0,0,1,1.35-1.36h40c4.21,0,13.39,0,13.39,8.73s-9.33,8.72-13.39,8.72H253.81Zm46.32,50.83h-45a1.26,1.26,0,0,1-1.35-1.35V100.81h46.32c4.52,0,11.74,0,11.74,8.72C311.87,118.4,303.59,118.1,300.13,118.1ZM528.6,50.58V63.81a2.15,2.15,0,0,1-2.11,2.11H500.77V145a1.5,1.5,0,0,1-2.47,1.15l-17.66-15a6,6,0,0,1-2.13-4.59V65.77H450.69a4.27,4.27,0,0,1-3.76-2.41l-6.77-13.53a1.11,1.11,0,0,1,1-1.36h85.28A2.16,2.16,0,0,1,528.6,50.58Z"
+              fill="#fff"
+            ></path>
+            <path
+              d="M847.45,92.08a11,11,0,1,1-11-11A10.94,10.94,0,0,1,847.45,92.08ZM158.37,21.49c0-.46,0-1.48.5-1.48.71,0,1.32,1.5,1.55,2.14,3.85,12.26,2.77,27.31-2.73,44.25,21.82,11.66,34.35,26.78,32.08,40.92-3,18.58-30.28,29.51-67,28.23,3.58-3.84,8.47-9.49,12.27-14.45,14.14-2.75,24.28-8.34,26.93-17.3,1.94-6.51-2.54-13.74-11.06-20.54-14,29.48-37.39,55.89-59,71.15,10.48,13.36,20.24,22.63,31.39,27.84.41.2,1.3.71,1,1.17-.35.62-2,.4-2.62.27-12.55-2.79-25-11.25-37-24.49-21,13.07-40.37,16.36-51.48,7.32-14.59-11.87-10.42-41,9-72.1,1.53,5,4,12.08,6.38,17.84-4.7,13.63-4.92,25.2,1.51,32,4.67,4.93,13.17,4.67,23.32.69C55,118.07,43.81,84.61,41.41,58.22c-16.81,2.4-29.72,6.21-39.8,13.26-.38.26-1.27.78-1.54.32-.35-.62.65-1.9,1.08-2.41,8.7-9.47,22.27-16.06,39.69-19.76-.81-24.74,6-43.15,19.4-48.25,17.58-6.7,40.7,11.47,57.93,43.88-5.11-1.18-12.45-2.59-18.64-3.39C90.08,31,80.16,25,71.07,27.19,64.47,28.77,60.45,36.26,58.82,47c32.53-2.63,67.09,4.43,91.14,15.55C156.29,46.84,159.44,33.75,158.37,21.49Zm-76,119.23C108.12,126,129,103.53,142.85,77.65h0C117.2,62.77,87.32,55.87,58,56.85h0c-.06,29.65,8.9,59,24.4,83.88Z"
+              fill="#148eff"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <div class="mt-5">
+        <button class="dBattle">
+          <span class="fa-light fa-download"></span>
+          Download Battle.net
+        </button>
+        <button class="support">
+          <span class="fa-light fa-question-circle"></span>
+          Support
+        </button>
+        <button class="account">
+          <label tabindex="0" class="btn btn-ghost m-0 w-full"
+            ><span class="fa-light fa-user-circle pr-1 text-[18px]"></span>
+            Account</label
+          >
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-1 shadow bg-[#15171E] dark:bg-[#7f5188] rounded-md w-[350px]"
+          >
+            <li class="h-[100px]">
+              <div
+                class="bg-[#0074E0] w-[290px] mx-auto h-[55px] my-auto rounded-md justify-center"
+              >
+                Log In
+              </div>
+            </li>
+            <li
+              class="h-[50px] dark:bg-[#b16fbe] leading-[50px] mx-4 text-gray-200 hover:bg-[#23252B] hover:text-white hover:rounded-md"
+            >
+              <a class="h-[50px] leading-[50px]"
+                ><span class="fa-light fa-user-gear"></span> Account Settings</a
+              >
+            </li>
+            <li
+              class="h-[50px] dark:bg-[#b16fbe] leading-[50px] mx-4 text-gray-200 hover:bg-[#23252B] hover:text-white hover:rounded-md"
+            >
+              <a class="h-[50px] leading-[50px]"
+                ><span class="fa-light fa-heart"></span> Wish List</a
+              >
+            </li>
+            <li
+              class="h-[50px] dark:bg-[#b16fbe] leading-[50px] mx-4 text-gray-200 hover:bg-[#23252B] hover:text-white hover:rounded-md"
+            >
+              <a class="h-[50px] leading-[50px]">
+                <span class="fa-light fa-barcode"></span> Redeem Code</a
+              >
+            </li>
+            <li
+              class="h-[50px] dark:bg-[#b16fbe] leading-[50px] mx-4 text-gray-200 hover:bg-[#23252B] hover:text-white hover:rounded-md"
+            >
+              <a class="h-[50px] leading-[50px]"
+                ><span class="fa-light fa-ticket-alt"></span> Change
+                BattleTag</a
+              >
+            </li>
+            <li
+              class="h-[70px] leading-[70px] dark:bg-[#b16fbe] bg-[#23252B] mt-1 text-gray-200 hover:bg-[#35363d] hover:text-white hover:rounded-md"
+            >
+              <a class="h-[70px] leading-[70px] px-8"
+                ><span class="fa-light fa-edit"></span> Create Account</a
+              >
+            </li>
+          </ul>
+        </button>
+      </div>
+    </div>
+
+    <!--start menuMedia-->
+    <div
+      class="menuMedia w-[50%] left-[-100%] transition-[300ms] mt-2 z-[99] pt-7 pb-7 leading-[50px] absolute bg-[#15171e] dark:bg-[#e7e5e4] text-[#c9c9c9] dark:text-black border-r-2 border-[#c9c9c9]"
+    >
+      <button
+        class="accordion w-full text-left hover:bg-[rgb(35,37,43)] dark:hover:bg-white"
+      >
+        <a class="pl-7">Warcraft </a
+        ><span class="fa fa-chevron-down text-[14px] pl-2"></span>
+      </button>
+      <div class="panel">
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/warcraft1.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                World of Warcraft
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Massively Multiplayer RPG
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/warcraft2.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                World of Warcraft Classic
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Massively Multiplayer RPG
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/warcraft3.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Warcraft III
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Real-time Strategy
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/warcraft4.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Hearthstone
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Strategy Card Game
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+      </div>
+      <button
+        class="accordion w-full text-left hover:bg-[rgb(35,37,43)] dark:hover:bg-white"
+      >
+        <a class="pl-7">Call of Duty </a
+        ><span class="fa fa-chevron-down text-[14px] pl-2"></span>
+      </button>
+      <div class="panel">
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/duty1.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Warzone 2.0
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Free-To-Play Action Shooter
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/duty2.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Modern Warfare II
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Action Shooter
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/duty3.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Vanguard
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Action Shooter
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/duty4.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Black Ops Cold War
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Action Shooter
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/duty5.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Modern Warfare
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Action Shooter
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+      </div>
+      <button
+        class="accordion w-full text-left hover:bg-[rgb(35,37,43)] dark:hover:bg-white"
+      >
+        <a class="pl-7">Diablo </a
+        ><span class="fa fa-chevron-down text-[14px] pl-2"></span>
+      </button>
+      <div class="panel">
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/diablo1.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Diablo IV
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Action RPG
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/diablo2.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Diablo Immortal
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Action RPG
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/diablo3.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Diablo III
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Action RPG
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+      </div>
+      <button
+        class="accordion w-full text-left hover:bg-[rgb(35,37,43)] dark:hover:bg-white"
+      >
+        <a class="pl-7">Overwatch</a
+        ><span class="fa fa-chevron-down text-[14px] pl-2"></span>
+      </button>
+      <div class="panel">
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/watch.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Overwatch 2
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Team-Based Action Game
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+      </div>
+      <button
+        class="accordion w-full text-left hover:bg-[rgb(35,37,43)] dark:hover:bg-white"
+      >
+        <a class="pl-7">StarCraft </a
+        ><span class="fa fa-chevron-down text-[14px] pl-2"></span>
+      </button>
+      <div class="panel">
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/star1.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                StarCraft II
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Real-time Strategy
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/star2.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                StarCraft
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Real-time Strategy
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+      </div>
+      <button
+        class="accordion w-full text-left hover:bg-[rgb(35,37,43)] dark:hover:bg-white"
+      >
+        <a class="pl-7">Other </a
+        ><span class="fa fa-chevron-down text-[14px] pl-2"></span>
+      </button>
+      <div class="panel">
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/more1.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Blizzard Arcade Collection
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">Bundles</p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/more2.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Crash Bandicoot 4
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">
+                Platformer
+              </p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full grid grid-cols-12">
+            <img
+              src="./images/more3.svg"
+              alt=""
+              class="col-start-1 col-end-3 m-0 h-[80px] leading-[80px] pl-4"
+            />
+            <div class="col-start-3 col-end-6">
+              <h5
+                class="text-[11px] w-[200px] text-left pl-1 font-bold items-start"
+              >
+                Heroes of the Storm
+              </h5>
+              <p class="text-[12px] w-[200px] text-left pl-1 pb-3">MOBA</p>
+            </div>
+          </a>
+        </button>
+        <div class="panel"></div>
+      </div>
+      <button
+        class="accordion w-full text-left hover:bg-[rgb(35,37,43)] dark:hover:bg-white"
+      >
+        <a class="pl-7">Battle.net Balance </a
+        ><span class="fa fa-chevron-down text-[14px] pl-2"></span>
+      </button>
+      <div class="panel">
+        <button
+          class="accordion w-full h-[80px] text-left leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full text-white dark:text-black capitalize pl-8"
+            ><span class="fa-light fa-plus-circle pr-2"></span>add balance</a
+          >
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] text-left leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full text-white dark:text-black capitalize pl-8"
+            ><span class="fa-light fa-gift pr-2"></span>gift balance</a
+          >
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] text-left leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full text-white dark:text-black capitalize pl-8"
+            ><span class="fa-light fa-history pr-2"></span>balance history</a
+          >
+        </button>
+        <div class="panel"></div>
+        <button
+          class="accordion w-full h-[80px] text-left leading-[40px] hover:bg-[rgb(35,37,43)] dark:hover:bg-white hover:rounded-b-lg mb-2"
+        >
+          <a class="w-full text-white dark:text-black capitalize pl-8"
+            ><span class="fa-light fa-question-circle pr-2"></span>balance
+            help</a
+          >
+        </button>
+        <div class="panel"></div>
+      </div>
+    </div>
+    <!--end menuMedia-->
+
+    <!--start accountMedia-->
+    <span class="userMedia fa-light fa-user-circle"></span>
+
+    <div
+      class="accountMedia w-[50%] absolute right-[-100%] transition-[300ms] z-[99]"
+    >
+      <ul
+        class="p-5 relative bottom-0 shadow bg-[#15171E] dark:bg-[#7f5188] rounded-md w-[100%] cursor-pointer"
+      >
+        <li class="pb-5 w-100">
+          <div
+            class="bg-[#0074E0] text-center cursor-pointer w-[90%] mx-auto text-white font-bold h-[40px] leading-[40px] my-auto rounded-md"
+          >
+            Log In
+          </div>
+        </li>
+        <li
+          class="h-[50px] dark:bg-[#b16fbe] leading-[50px] mx-4 text-gray-200 hover:bg-[#23252B] hover:text-white hover:rounded-md"
+        >
+          <a class="h-[50px] leading-[50px]"
+            ><span class="fa-light fa-user-gear"></span> Account Settings</a
+          >
+        </li>
+        <li
+          class="h-[50px] dark:bg-[#b16fbe] leading-[50px] mx-4 text-gray-200 hover:bg-[#23252B] hover:text-white hover:rounded-md"
+        >
+          <a class="h-[50px] leading-[50px]"
+            ><span class="fa-light fa-heart"></span> Wish List</a
+          >
+        </li>
+        <li
+          class="h-[50px] dark:bg-[#b16fbe] leading-[50px] mx-4 text-gray-200 hover:bg-[#23252B] hover:text-white hover:rounded-md"
+        >
+          <a class="h-[50px] leading-[50px]">
+            <span class="fa-light fa-barcode"></span> Redeem Code</a
+          >
+        </li>
+        <li
+          class="h-[50px] dark:bg-[#b16fbe] leading-[50px] mx-4 text-gray-200 hover:bg-[#23252B] hover:text-white hover:rounded-md"
+        >
+          <a class="h-[50px] leading-[50px]"
+            ><span class="fa-light fa-ticket-alt"></span> Change BattleTag</a
+          >
+        </li>
+        <li
+          class="h-[70px] leading-[70px] dark:bg-[#b16fbe] bg-[#23252B] mt-1 text-gray-200 hover:bg-[#35363d] hover:text-white hover:rounded-md"
+        >
+          <a class="h-[70px] leading-[70px] px-8"
+            ><span class="fa-light fa-edit"></span> Create Account</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!--end accountMedia-->
+
+    <div
+      class="menuLarge grid-cols-7 items-stretch mt-5 w-[98%] mx-auto rounded-md bg-[rgb(35,37,43)] dark:bg-[#b16fbe]"
+    >
+      <div class="a col-start-1 col-end-8">
+        <button class="dropdown dropdown-hover">
+          <label
+            tabindex="0"
+            class="btn bg-[rgb(35,37,43)] dark:bg-[#b16fbe] border-none hover:bg-[#3f3f3f] m-1 capitalize"
+            >Warcraft <span class="fa-light fa-chevron-down pl-2"></span
+          ></label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow border border-[#969696] bg-[#15171e] dark:bg-[#b16fbe] rounded-md w-[280px]"
+          >
+            <li
+              class="w-full h-[80px] hover:bg-[rgb(35,37,43)] dark:bg-[#b16fbe] hover:rounded-b-lg mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/warcraft1.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    World of Warcraft
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Massively Multiplayer RPG
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] hover:bg-[rgb(35,37,43)] dark:bg-[#b16fbe] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/warcraft2.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    World of Warcraft Classic
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Massively Multiplayer RPG
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] hover:bg-[rgb(35,37,43)] dark:bg-[#b16fbe] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/warcraft3.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Warcraft III
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Real-time Strategy
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] hover:bg-[rgb(35,37,43)] dark:bg-[#b16fbe] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/warcraft4.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Hearthstone
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Strategy Card Game
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+        <button class="dropdown dropdown-hover">
+          <label
+            tabindex="0"
+            class="btn bg-[rgb(35,37,43)] dark:bg-[#b16fbe] border-none hover:bg-[#3f3f3f] m-1 capitalize"
+            >call of duty <span class="fa-light fa-chevron-down pl-2"></span
+          ></label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow border border-[#969696] bg-[#15171e] dark:bg-[#b16fbe] rounded-md w-[280px]"
+          >
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/duty1.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Warzone 2.0
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Free-To-Play Action Shooter
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/duty2.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Black Ops 4
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Action Shooter
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/duty3.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Modern Warfare
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Action Shooter
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/duty4.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Vanguard
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Action Shooter
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/duty5.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Black Ops Cold War
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Action Shooter
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+        <button class="dropdown dropdown-hover">
+          <label
+            tabindex="0"
+            class="btn bg-[rgb(35,37,43)] dark:bg-[#b16fbe] border-none hover:bg-[#3f3f3f] m-1 capitalize"
+            >diablo <span class="fa-light fa-chevron-down pl-2"></span
+          ></label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow border border-[#969696] bg-[#15171e] dark:bg-[#b16fbe] rounded-md w-[280px]"
+          >
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/diablo1.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Diablo Immortal
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">Action RPG</p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/diablo2.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Diablo III
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">Action RPG</p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/diablo3.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Diablo II: Resurrected
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">Action RPG</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+        <button class="dropdown dropdown-hover">
+          <label
+            tabindex="0"
+            class="btn bg-[rgb(35,37,43)] dark:bg-[#b16fbe] border-none hover:bg-[#3f3f3f] m-1 capitalize"
+            >overwatch <span class="fa-light fa-chevron-down pl-2"></span
+          ></label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow border border-[#969696] bg-[#15171e] dark:bg-[#b16fbe] rounded-md w-[280px]"
+          >
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/watch.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Overwatch 2
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Team-Based Action Game
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+        <button class="dropdown dropdown-hover">
+          <label
+            tabindex="0"
+            class="btn bg-[rgb(35,37,43)] dark:bg-[#b16fbe] border-none hover:bg-[#3f3f3f] m-1 capitalize"
+            >starcraft <span class="fa-light fa-chevron-down pl-2"></span
+          ></label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow border border-[#969696] bg-[#15171e] dark:bg-[#b16fbe] rounded-md w-[280px]"
+          >
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/star2.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    StarCraft
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Real-time Strategy
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/star1.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    StarCraft II
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">
+                    Real-time Strategy
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+        <button class="dropdown dropdown-hover">
+          <label
+            tabindex="0"
+            class="btn bg-[rgb(35,37,43)] dark:bg-[#b16fbe] border-none hover:bg-[#3f3f3f] m-1 capitalize"
+            >more <span class="fa-light fa-chevron-down pl-2"></span
+          ></label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow border border-[#969696] bg-[#15171e] dark:bg-[#b16fbe] rounded-md w-[280px]"
+          >
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/more1.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Blizzard Arcade Collection
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">Bundles</p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/more2.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Crash Bandicoot 4
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">Platformer</p>
+                </div>
+              </a>
+            </li>
+            <li
+              class="w-full h-[80px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)] mb-2"
+            >
+              <a class="w-full grid grid-cols-12">
+                <img
+                  src="./images/more3.svg"
+                  alt=""
+                  class="col-start-1 col-end-3 m-0"
+                />
+                <div class="col-start-3 col-end-6 text-white">
+                  <h5
+                    class="text-[11px] w-[200px] text-left p-1 font-bold items-start"
+                  >
+                    Heroes of the Storm
+                  </h5>
+                  <p class="text-[12px] w-[200px] text-left p-1">MOBA</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+      </div>
+      <div class="b col-start-9 col-end-10">
+        <button class="dropdown dropdown-hover">
+          <span
+            tabindex="0"
+            class="battleSearch fa fa-search btn bg-[rgb(35,37,43)] dark:bg-[#b16fbe] border-none hover:bg-[#3f3f3f] m-1 pt-4"
+          ></span>
+        </button>
+      </div>
+      <div class="c col-start-10 col-end-12">
+        <button class="dropdown dropdown-hover dropdown-end">
+          <label
+            tabindex="0"
+            class="btn bg-[rgb(35,37,43)] dark:bg-[#b16fbe] border-none hover:bg-[#3f3f3f] m-1 capitalize"
+            >battle.net balance
+            <span class="fa-light fa-chevron-down pl-2"></span
+          ></label>
+          <ul
+            tabindex="0"
+            class="dropdown-content menu p-2 shadow border border-[#969696] bg-[#15171e] dark:bg-[#b16fbe] rounded-md w-[280px]"
+          >
+            <li
+              class="w-full h-[50px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)]"
+            >
+              <a class="w-full text-white text-left capitalize"
+                ><span class="fa-light fa-plus-circle"></span>add balance</a
+              >
+            </li>
+            <li
+              class="w-full h-[50px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)]"
+            >
+              <a class="w-full text-white text-left capitalize"
+                ><span class="fa-light fa-gift"></span>gift balance</a
+              >
+            </li>
+            <li
+              class="w-full h-[50px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)]"
+            >
+              <a class="w-full text-white text-left capitalize"
+                ><span class="fa-light fa-history"></span>balance history
+                <span
+                  class="fa-light fa-square-arrow-up-right text-white pl-12 pt-1"
+                ></span
+              ></a>
+            </li>
+            <li
+              class="w-full h-[50px] dark:bg-[#b16fbe] hover:bg-[rgb(35,37,43)]"
+            >
+              <a class="w-full text-white text-left capitalize"
+                ><span class="fa-light fa-question-circle"></span>balance
+                help<span
+                  class="fa-light fa-square-arrow-up-right text-white pl-16 pt-1"
+                ></span
+              ></a>
+            </li>
+          </ul>
+        </button>
+      </div>
+    </div>
+
+    <!--start small search-->
+    <div class="smallSearch relative w-100 h-[50px] left-[1%]">
+      <label
+        for="search"
+        class="inline-block absolute left-[3%] leading-[55px] z-20"
+      >
+        <span class="fa fa-search text-white mr-[-150px]"></span>
+      </label>
+      <input
+        class="w-[98%] h-[55px] leading-[55px] absolute pl-[8%] placeholder:text-white inline-block outline-none bg-[#23252b] dark:bg-[#b16fbe] border-none caret-white rounded-md shadow-sm focus:outline-none"
+        placeholder="Search shop"
+        type="search"
+        name="search"
+      />
+    </div>
+
+    <!--end small search-->
+
+    <!--start games slider-->
+
+    <div
+      class="carousel gamesSlider w-[98%] left-[1%] relative top-3 rounded-md"
+    >
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="./images/slide1.jpg" class="w-full largeImage" />
+        <img src="./images/smallSlider1.webp" class="smallImage" />
+
+        <div class="absolute textSlider bottom-[10%] text-center text-white">
+          <img
+            src="./images/Diablo_IV_Logo.webp"
+            alt=""
+            class="logoSlider block"
+          />
+
+          <p class="w-[300px] text-[20px] font-bold block">
+            Pre-purchase and get up to 4 days of Early Access
+          </p>
+          <button
+            class="bg-[#0074e0] w-[200px] py-2 ml-[50px] mt-5 text-[22px] font-bold rounded-md block capitalize hover:bg-[#0088f0] transition-[300ms] hover:border border-spacing-0.5"
+          >
+            Pre-purchase
+          </button>
+        </div>
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide5" class="btn btn-square w-7">❮</a>
+          <a href="#slide2" class="btn btn-square w-7">❯</a>
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="./images/slide2.jpg" class="w-full largeImage" />
+        <img src="./images/smallSlider2.webp" class="w-full smallImage" />
+        <div class="absolute textSlider bottom-[10%] text-center text-white">
+          <img src="./images/logos2.webp" alt="" class="logoSlider block" />
+
+          <p class="w-[300px] text-[20px] font-bold block">Season 02 Is Live</p>
+          <button
+            class="bg-[#0074e0] w-[200px] py-2 ml-[50px] mt-5 text-[22px] font-bold rounded-md block capitalize hover:bg-[#0088f0] transition-[300ms] hover:border border-spacing-0.5"
+          >
+            buy now
+          </button>
+        </div>
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide1" class="btn btn-square w-7">❮</a>
+          <a href="#slide3" class="btn btn-square w-7">❯</a>
+        </div>
+      </div>
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="./images/slide3.jpg" class="w-full largeImage" />
+        <img src="./images/smallSlider3.webp" class="w-full smallImage" />
+        <div class="absolute textSlider bottom-[10%] text-center text-white">
+          <img
+            src="./images/logo_on_red.webp"
+            alt=""
+            class="logoSlider block"
+          />
+
+          <p class="w-[300px] text-[20px] font-bold block">
+            The One-Punch Man collaboration ends soon!
+          </p>
+          <button
+            class="bg-[#0074e0] w-[220px] py-2 ml-[40px] mt-5 text-[22px] font-bold rounded-md block capitalize hover:bg-[#0088f0] transition-[300ms] hover:border border-spacing-0.5"
+          >
+            shop the bundles
+          </button>
+        </div>
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide2" class="btn btn-square w-7">❮</a>
+          <a href="#slide4" class="btn btn-square w-7">❯</a>
+        </div>
+      </div>
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="./images/slide4.jpg" class="w-full largeImage" />
+        <img src="./images/smallSlider4.webp" class="w-full smallImage" />
+        <div class="absolute textSlider bottom-[10%] text-center text-white">
+          <img src="./images/logos4.webp" alt="" class="logoSlider block" />
+
+          <p class="w-[300px] text-[20px] font-bold block">
+            Save up to 30% on select character services through April 3
+          </p>
+          <button
+            class="bg-[#0074e0] w-[200px] py-2 ml-[50px] mt-5 text-[22px] font-bold rounded-md block capitalize hover:bg-[#0088f0] transition-[300ms] hover:border border-spacing-0.5"
+          >
+            buy now
+          </button>
+        </div>
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide3" class="btn btn-square w-7">❮</a>
+          <a href="#slide5" class="btn btn-square w-7">❯</a>
+        </div>
+      </div>
+      <div id="slide5" class="carousel-item relative w-full">
+        <img src="./images/slide5.jpg" class="w-full largeImage" />
+        <img src="./images/smallSlider5.webp" class="w-full smallImage" />
+        <div class="absolute textSlider bottom-[10%] text-center text-white">
+          <img src="./images/logos5.webp" alt="" class="logoSlider block" />
+
+          <p class="w-[300px] text-[20px] font-bold block">
+            Get ready to jam with the Mega Bundle for the new Expansion!
+            Pre-Purchase
+          </p>
+          <button
+            class="bg-[#0074e0] w-[200px] py-2 ml-[50px] mt-5 text-[22px] font-bold rounded-md block capitalize hover:bg-[#0088f0] transition-[300ms] hover:border border-spacing-0.5"
+          >
+            Pre-purchase
+          </button>
+        </div>
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide4" class="btn btn-square w-7">❮</a>
+          <a href="#slide1" class="btn btn-square w-7">❯</a>
+        </div>
+      </div>
+    </div>
+
+    <!--end games slider-->
+
+    <!--start games-->
+    <div
+      class="bottomSlider bg-[rgb(35,37,43)] dark:bg-[#b16fbe] mt-10 pb-5 relative w-[98%] left-[1%] rounded-md"
+    >
+      <h5 class="text-white text-center font-bold pt-3">GAMES</h5>
+      <div class="flex flex-row flex-wrap justify-center mt-3">
+        <img
+          src="./images/diablo1.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/diablo2.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/diablo3.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2"
+        />
+        <img
+          src="./images/warcraft1.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/games3.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/warcraft2.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2"
+        />
+        <img
+          src="./images/warcraft3.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/warcraft4.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/more1.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/games4.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/duty2.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/duty3.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/duty4.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/more2.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/more3.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/star1.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/star2.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/games2.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/watch.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+        <img
+          src="./images/games5.svg"
+          alt=""
+          class="imgLogoGames w-[40px] inline-block my-2 hover:w-[45px]"
+        />
+      </div>
+    </div>
+    <!--end games-->
+
+    <!--start card-->
+    <h3
+      class="w-[300px] relative top-[70px] left-[1%] text-[30px] font-bold text-white dark:text-black"
+    >
+      Recommended
+    </h3>
+
+    <div class="warGames grid relative w-[98%] left-[1%] top-[90px] gap-4">
+      <div class="a">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/cardrow1-1.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/diablo2.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="b">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/cardrow1-2.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/warcraft1.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="c">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/cardrow1-3.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/warcraft4.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/cardrow1-4.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/games2.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="a2">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/g5.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/diablo2.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="b2">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/g66.jpg" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/warcraft1.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="c2">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/g7.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/warcraft4.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d2">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/g8.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/games2.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="a3">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/card9.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/diablo2.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="b3">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/card10.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/warcraft1.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="c3">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/card11.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/warcraft4.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d3">
+        <div
+          class="block max-w-sm rounded-lg bg-white shadow-lg dark:bg-neutral-700"
+        >
+          <a href="#!">
+            <img class="rounded-t-lg" src="./images/card12.webp" alt="" />
+          </a>
+          <div
+            class="p-6 cursor-pointer bg-[rgb(35,37,43)] dark:bg-[#b16fbe] text-white rounded-b-lg hover:bg-[rgb(61,63,70)] hover:font-mono"
+          >
+            <img
+              src="./images/games2.svg"
+              alt=""
+              class="w-[35px] inline-block"
+            />
+            <h5
+              class="mb-2 text-xl text-[16px] font-bold leading-tight text-white dark:text-neutral-50 inline-block"
+            >
+              DIABLO IV
+            </h5>
+            <p
+              class="mb-4 text-base text-[22px] font-bold text-white dark:text-neutral-200 block"
+            >
+              Diablo® IV: Ultimate Edition
+            </p>
+            <p class="mb-4 text-base text-yellow-500 dark:text-neutral-200">
+              Pre-purchase now for Early Access, and more.
+            </p>
+            <p class="mb-4 text-base text-[#d4d4d4] dark:text-neutral-200">
+              Action RPG
+            </p>
+            <p
+              class="mb-4 text-base font-bold text-white dark:text-neutral-200"
+            >
+              EUR 99.99
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--end card-->
+
+    <!--start download-->
+    <div
+      class="w-[100%] mx-auto h-auto bg-[url('/images/bgdownload.webp')] bg-cover bg-center relative top-[150px] border-y-[1px] py-20 border-white"
+    >
+      <div class="textDownload text-white leading-10 inline-block">
+        <h2 class="font-bold text-[35px]">Download Battle.net</h2>
+        <p class="pt-5 text-[#c9c9c9] text-[20px] font-bold">
+          <span class="pr-3 fa fa-gamepad-alt text-[rgb(0,116,224)]"></span>
+          Your games in one place
+        </p>
+        <p class="text-[#c9c9c9] text-[20px] font-bold">
+          <span class="pr-3 fa fa-people-pants text-[rgb(0,116,224)]"></span
+          >Connect with friends
+        </p>
+        <p class="text-[#c9c9c9] text-[20px] font-bold">
+          <span class="pr-3 fa fa-gift text-[rgb(0,116,224)]"></span>Shop for
+          digital games and goodies
+        </p>
+        <button
+          class="mt-10 bg-[rgb(0,116,224)] py-2 px-5 font-bold text-[18px] rounded-md hover:bg-[#0088f0] transition-[300ms] hover:border border-spacing-0.5"
+        >
+          Download for Windows<span class="fa fa-download pl-3"></span>
+        </button>
+        <button
+          class="mt-10 ml-3 bg-[rgb(56,59,66)] py-2 px-5 font-bold text-[18px] rounded-md hover:bg-[rgb(82,85,92)] transition-[300ms] hover:border border-spacing-0.5"
+        >
+          Learn More
+        </button>
+        <p class="pt-3 text-[#c9c9c9] text-[16px]">
+          Also available as a
+          <a href="#" class="underline hover:text-[rgb(0,116,224)]"
+            >mobile app</a
+          >
+        </p>
+      </div>
+
+      <div class="logoDownload w-[20%] mb-5 -z-1">
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 600 580.44"
+          class="opacity-25"
+        >
+          <path
+            d="M473.49,197.63c-75.94-35.11-185.08-57.42-287.78-49.11,5.15-34,17.85-57.69,38.7-62.68,28.69-6.88,60,12,89.84,46.35,19.55,2.53,42.73,7,58.86,10.71C318.7,40.56,245.72-16.8,190.21,4.36,148,20.47,126.39,78.59,129,156.69c-55,11.7-97.87,32.49-125.31,62.39-1.39,1.61-4.53,5.67-3.41,7.61.85,1.47,3.65-.18,4.85-1,31.83-22.26,72.58-34.31,125.66-41.89,7.56,83.32,42.81,189,101.36,273.78-32,12.56-58.89,13.39-73.64-2.17-20.29-21.41-19.61-57.95-4.77-101-7.58-18.2-15.31-40.51-20.15-56.34C72.12,396.41,58.93,488.29,105,525.78c35.07,28.52,96.18,18.15,162.54-23.12,37.64,41.79,77.07,68.51,116.69,77.33,2.09.39,7.17,1.09,8.29-.85.85-1.47-2-3.08-3.28-3.71-35.19-16.44-66-45.71-99.1-87.88C358.53,439.34,432.42,356,476.57,262.88c26.9,21.47,41,44.3,34.94,64.85-8.4,28.29-40.38,46-85.06,54.63C414.48,398,399,415.86,387.74,428c115.84,4,202-30.47,211.43-89.12,7.17-44.64-32.37-92.38-101.3-129.21,17.38-53.49,20.8-101,8.63-139.72-.71-2-2.64-6.76-4.88-6.76-1.7,0-1.68,3.26-1.58,4.7C503.41,106.55,493.47,147.88,473.49,197.63ZM260.21,444.33c-49-78.61-77.24-171.21-77.06-264.84h0C275.71,176.39,370,198.2,451,245.17h0c-43.59,81.71-109.64,152.49-190.82,199.15Z"
+            fill="#148eff"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="imgDownload inline-block z-20 relative">
+        <img src="./images/download.png" alt="" />
+      </div>
+    </div>
+    <!--end download-->
+    <!--start footer-->
+    <div class="footer mt-[220px] block text-center">
+      <div class="block w-[30%] relative left-[35%]">
+        <svg
+          class="w-[100%] block"
+          aria-hidden="true"
+          focusable="false"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 183.84"
+        >
+          <g>
+            <path
+              d="M459.56,132.69,420.61,54.63a11.44,11.44,0,0,0-10.08-6.16h-20.3a11.43,11.43,0,0,0-10.08,6.16l-38.8,78.06a2,2,0,0,0,1.8,3H360.6a2.74,2.74,0,0,0,2.55-1.5l8.58-17.15h57.6l8.57,17.15a2.53,2.53,0,0,0,2.56,1.5h17.45A2.1,2.1,0,0,0,459.56,132.69ZM380.15,99.75l16.24-32.63a2.37,2.37,0,0,1,2-1.21h4.06a2,2,0,0,1,1.95,1.21l16.25,32.63ZM1200,50.58V63.81a2.15,2.15,0,0,1-2.11,2.11H1162.7V145a1.5,1.5,0,0,1-2.48,1.15l-17.51-14.86a6,6,0,0,1-2.12-4.59V65.92h-28a4.27,4.27,0,0,1-3.76-2.41L1102.09,50a1,1,0,0,1,.9-1.51h94.75A2.3,2.3,0,0,1,1200,50.58ZM1011.24,67.42V83.51h64.23a8.73,8.73,0,0,1,0,17.45h-64.23v12a5.66,5.66,0,0,0,5.57,5.57h72.34a2.15,2.15,0,0,1,2.11,2.1V133.9a2.26,2.26,0,0,1-2.11,2.1h-78.21a22.3,22.3,0,0,1-22.26-22.26v-54a11.11,11.11,0,0,1,11.13-11.13h89.34a2.15,2.15,0,0,1,2.11,2.1V64a2.26,2.26,0,0,1-2.11,2.1H1012.6C1011.84,65.91,1011.24,66.52,1011.24,67.42ZM969.88,51.17v76.56A10.86,10.86,0,0,1,952,136L884.45,78.7v54.44a2.69,2.69,0,0,1-2.7,2.71h-17a2.83,2.83,0,0,1-2.86-2.71V56.74a10.86,10.86,0,0,1,17.9-8.27l67.53,57.3V51.32A2.83,2.83,0,0,1,950,48.47h17A2.73,2.73,0,0,1,969.88,51.17ZM759.47,67.42V83.51h44.67a8.73,8.73,0,0,1,0,17.45H759.47v12a5.65,5.65,0,0,0,5.56,5.57h72.35a2.15,2.15,0,0,1,2.1,2.1V133.9a2.15,2.15,0,0,1-2.1,2.1H759.17a22.3,22.3,0,0,1-22.26-22.26v-54A11.1,11.1,0,0,1,748,48.62h89.34a2.15,2.15,0,0,1,2.1,2.1V64a2.15,2.15,0,0,1-2.1,2.1H760.82C760.07,65.91,759.47,66.52,759.47,67.42Zm-31.89,52.94V133.6a2.15,2.15,0,0,1-2.1,2.1H662.61a22.3,22.3,0,0,1-22.26-22.26V50.57a2.15,2.15,0,0,1,2.1-2.1H661a2.15,2.15,0,0,1,2.11,2.1v62.12a5.65,5.65,0,0,0,5.56,5.56h56.86A2.15,2.15,0,0,1,727.58,120.36ZM628.47,50.58V63.81a2.16,2.16,0,0,1-2.11,2.11H593.57V145a1.5,1.5,0,0,1-2.47,1.14l-17.66-15a6,6,0,0,1-2.13-4.59V65.77H550a4.27,4.27,0,0,1-3.76-2.41l-6.77-13.53c-.3-.6.15-1.36,1.05-1.36h85.88A2.16,2.16,0,0,1,628.47,50.58ZM317.28,91.18c4.06-1.5,12.33-5.41,12.33-16.54,0-19.1-14.13-26.17-31.13-26.17H233.66a2.15,2.15,0,0,0-2.11,2.1v83a2.15,2.15,0,0,0,2.11,2.1h73.09c10.68-.15,26-6.17,26-25.87C332.77,97.5,321.79,92.39,317.28,91.18ZM253.81,67.27a1.27,1.27,0,0,1,1.35-1.36h40c4.21,0,13.39,0,13.39,8.73s-9.33,8.72-13.39,8.72H253.81Zm46.32,50.83h-45a1.26,1.26,0,0,1-1.35-1.35V100.81h46.32c4.52,0,11.74,0,11.74,8.72C311.87,118.4,303.59,118.1,300.13,118.1ZM528.6,50.58V63.81a2.15,2.15,0,0,1-2.11,2.11H500.77V145a1.5,1.5,0,0,1-2.47,1.15l-17.66-15a6,6,0,0,1-2.13-4.59V65.77H450.69a4.27,4.27,0,0,1-3.76-2.41l-6.77-13.53a1.11,1.11,0,0,1,1-1.36h85.28A2.16,2.16,0,0,1,528.6,50.58Z"
+              fill="#fff"
+            ></path>
+            <path
+              d="M847.45,92.08a11,11,0,1,1-11-11A10.94,10.94,0,0,1,847.45,92.08ZM158.37,21.49c0-.46,0-1.48.5-1.48.71,0,1.32,1.5,1.55,2.14,3.85,12.26,2.77,27.31-2.73,44.25,21.82,11.66,34.35,26.78,32.08,40.92-3,18.58-30.28,29.51-67,28.23,3.58-3.84,8.47-9.49,12.27-14.45,14.14-2.75,24.28-8.34,26.93-17.3,1.94-6.51-2.54-13.74-11.06-20.54-14,29.48-37.39,55.89-59,71.15,10.48,13.36,20.24,22.63,31.39,27.84.41.2,1.3.71,1,1.17-.35.62-2,.4-2.62.27-12.55-2.79-25-11.25-37-24.49-21,13.07-40.37,16.36-51.48,7.32-14.59-11.87-10.42-41,9-72.1,1.53,5,4,12.08,6.38,17.84-4.7,13.63-4.92,25.2,1.51,32,4.67,4.93,13.17,4.67,23.32.69C55,118.07,43.81,84.61,41.41,58.22c-16.81,2.4-29.72,6.21-39.8,13.26-.38.26-1.27.78-1.54.32-.35-.62.65-1.9,1.08-2.41,8.7-9.47,22.27-16.06,39.69-19.76-.81-24.74,6-43.15,19.4-48.25,17.58-6.7,40.7,11.47,57.93,43.88-5.11-1.18-12.45-2.59-18.64-3.39C90.08,31,80.16,25,71.07,27.19,64.47,28.77,60.45,36.26,58.82,47c32.53-2.63,67.09,4.43,91.14,15.55C156.29,46.84,159.44,33.75,158.37,21.49Zm-76,119.23C108.12,126,129,103.53,142.85,77.65h0C117.2,62.77,87.32,55.87,58,56.85h0c-.06,29.65,8.9,59,24.4,83.88Z"
+              fill="#148eff"
+            ></path>
+          </g>
+        </svg>
+      </div>
+
+      <div class="text-[20px] text-[#c9c9c9] dark:text-black block pt-10">
+        <a class="inline-block hover:text-white" href="#">CAREERS</a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#">ABOUT</a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#">SUPPORT</a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#">CONTACT</a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#"> USPRESS</a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#">API</a>
+      </div>
+      <div class="app block text-center pt-3">
+        <p class="text-[#c9c9c9] dark:text-black text-[18px]">
+          All games, one app:<a
+            class="text-[rgb(0,116,224)] underline px-2 hover:text-[rgb(96,142,216)]"
+            href="#"
+            >Battle.net Desktop App</a
+          >
+        </p>
+      </div>
+
+      <div
+        class="text-[13px] w-[40%] text-[#c9c9c9] dark:text-black block pt-10 ml-[30%]"
+      >
+        <p>
+          ©2023 BLIZZARD ENTERTAINMENT, INC. ALL RIGHTS RESERVED. All trademarks
+          referenced herein are the properties of their respective owners.
+        </p>
+      </div>
+
+      <div
+        class="text-[13px] text-[#c9c9c9] dark:text-black block pt-2 pb-[50px]"
+      >
+        <a class="inline-block hover:text-white" href="#">PRIVACY </a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#">LEGAL</a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#">TERMSCOOKIE</a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#">POLICYCOOKIE </a>
+        <div class="w-[1px] h-[15px] mx-2 bg-[#666666] inline-block"></div>
+        <a class="inline-block hover:text-white" href="#">SETTINGS</a>
+      </div>
+    </div>
+    <!--end footer-->
+    <!--top-->
+    <a
+      href="#top"
+      class="border-[1px] border-[#8f8f8f] p-3 px-4 bg-[#23252b] dark:bg-[#c9c9c9] text-white dark:text-black rounded-md right-5 bottom-[40px] fixed z-50 hover:border-[2px] hover:border-[#ffffff]"
+      ><span class="fa fa-chevron-up"></span
+    ></a>
+    <!--top-->
+    <script type="module" src="./public/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      document
+        .querySelector("button.dark")
+        .addEventListener("click", function () {
+          document.firstElementChild.classList.toggle("dark");
+        });
+
+      document
+        .querySelector("span.fa-bars")
+        .addEventListener("click", function () {
+          document.querySelector("div.menuMedia").classList.toggle("active");
+          this.classList.toggle("fa-close");
+        });
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      document
+        .querySelector("button.accordion")
+        .addEventListener("click", function () {
+          document.querySelector("div.panel").classList.toggle("active");
+        });
+
+      document
+        .querySelector("span.userMedia")
+        .addEventListener("click", function () {
+          document
+            .querySelector("div.accountMedia")
+            .classList.toggle("activeRight");
+          this.classList.toggle("fa-close");
+        });
+    </script>
+  </body>
+</html>
